@@ -176,8 +176,8 @@ SELECT fk_cod_produto AS codProduto, COUNT(cod_item) as tot_PEDIDO, SUM(qtd_prod
 SELECT numero_notafiscal, cod_cliente, nome_completo, fk_email, cpf, data_nascimento, endereco, 
   pi.fk_cod_pedido, cod_item, fk_cod_produto, qtd_produto
 FROM nota_fiscal as nf INNER JOIN cliente as c ON nf.fk_cod_cliente = c.cod_cliente
-	INNER JOIN pedido as p ON nf.fk_cod_pedido = p.cod_pedido
-    	INNER JOIN pedidoItem as pi ON p.cod_pedido = pi.fk_cod_pedido;
+  INNER JOIN pedido as p ON nf.fk_cod_pedido = p.cod_pedido
+  INNER JOIN pedidoItem as pi ON p.cod_pedido = pi.fk_cod_pedido;
 
 
 --
